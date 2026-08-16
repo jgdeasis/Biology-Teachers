@@ -1,1 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Faculty Teaching Biology Students | Centro Escolar University
+    </title>
+
+
+    <style>
+
+        /* =========================================
+           GENERAL PAGE
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6f7;
+            color: #333;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            background-color: #1f4d3a;
+            color: white;
+            text-align: center;
+            padding: 55px 20px 50px;
+        }
+
+        .university-name {
+            margin: 0 0 12px;
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .school-name {
+            margin: 0 0 30px;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .page-title {
+            margin: 0;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+
+        /* =========================================
+           INTRODUCTION
+        ========================================= */
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            margin-bottom: 10px;
+            color: #1f4d3a;
+            font-size: 26px;
+        }
+
+        .intro p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           SEARCH BOX
+        ========================================= */
+
+        .search-box {
+            width: 100%;
+            padding: 15px 18px;
+            margin-bottom: 35px;
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box:focus {
+            border-color: #1f4d3a;
+
+            box-shadow:
+                0 0 5px rgba(31, 77, 58, 0.2);
+        }
+
+
+        /* =========================================
+           FACULTY GRID
+        ========================================= */
+
+        .faculty-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================================
+           FACULTY CARD
+        ========================================= */
+
+        .faculty-card {
+            background-color: white;
+
+            border-radius: 14px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* =========================================
+           FACULTY PHOTO
+        ========================================= */
+
+        .faculty-photo {
+            width: 150px;
+            height: 150px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid #e7ece9;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           FACULTY NAME
+        ========================================= */
+
+        .faculty-name {
+            margin: 8px 0 12px;
+
+            font-size: 20px;
+
+            color: #1f4d3a;
+        }
+
+
+        /* =========================================
+           SPECIALIZATION
+        ========================================= */
+
+        .specialization {
+            margin: 0;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+
+            color: #666;
+        }
+
+        .specialization-label {
+            font-weight: bold;
+
+            color: #444;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            background-color: #1f4d3a;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        footer p {
+            margin: 6px 0;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .faculty-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 40px 15px;
+            }
+
+            .university-name {
+                font-size: 16px;
+            }
+
+            .school-name {
+                font-size: 19px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <p class="university-name">
+        CENTRO ESCOLAR UNIVERSITY
+    </p>
+
+    <p class="school-name">
+        School of Science and Technology
+    </p>
+
+    <h1 class="page-title">
+        FACULTY TEACHING BIOLOGY STUDENTS
+    </h1>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="container">
+
+
+    <div class="intro">
+
+        <h2>
+            Faculty Directory
+        </h2>
+
+        <p>
+            Faculty members teaching Biology students
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================================
+         SEARCH
+    ========================================= -->
+
+    <input
+        type="text"
+        id="search"
+        class="search-box"
+        placeholder="Search by faculty name or specialization..."
+        onkeyup="searchFaculty()"
+    >
+
+
+
+    <!-- =========================================
+         FACULTY MEMBERS
+    ========================================= -->
+
+    <div
+        class="faculty-grid"
+        id="facultyList"
+    >
+
+
+
+        <!-- FACULTY 01 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty01.jpg"
+                alt="Faculty Member 01"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 01
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 02 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty02.jpg"
+                alt="Faculty Member 02"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 02
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 03 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty03.jpg"
+                alt="Faculty Member 03"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 03
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 04 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty04.jpg"
+                alt="Faculty Member 04"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 04
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 05 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty05.jpg"
+                alt="Faculty Member 05"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 05
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 06 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty06.jpg"
+                alt="Faculty Member 06"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 06
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 07 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty07.jpg"
+                alt="Faculty Member 07"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 07
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 08 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty08.jpg"
+                alt="Faculty Member 08"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 08
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 09 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty09.jpg"
+                alt="Faculty Member 09"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 09
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 10 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty10.jpg"
+                alt="Faculty Member 10"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 10
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 11 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty11.jpg"
+                alt="Faculty Member 11"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 11
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 12 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty12.jpg"
+                alt="Faculty Member 12"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 12
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 13 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty13.jpg"
+                alt="Faculty Member 13"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 13
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 14 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty14.jpg"
+                alt="Faculty Member 14"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 14
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 15 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty15.jpg"
+                alt="Faculty Member 15"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 15
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 16 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty16.jpg"
+                alt="Faculty Member 16"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 16
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 17 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty17.jpg"
+                alt="Faculty Member 17"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 17
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 18 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty18.jpg"
+                alt="Faculty Member 18"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 18
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 19 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty19.jpg"
+                alt="Faculty Member 19"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 19
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 20 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty20.jpg"
+                alt="Faculty Member 20"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 20
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 21 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty21.jpg"
+                alt="Faculty Member 21"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 21
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 22 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty22.jpg"
+                alt="Faculty Member 22"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 22
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 23 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty23.jpg"
+                alt="Faculty Member 23"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 23
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 24 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty24.jpg"
+                alt="Faculty Member 24"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 24
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 25 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty25.jpg"
+                alt="Faculty Member 25"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 25
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 26 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty26.jpg"
+                alt="Faculty Member 26"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 26
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 27 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty27.jpg"
+                alt="Faculty Member 27"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 27
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 28 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty28.jpg"
+                alt="Faculty Member 28"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 28
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 29 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty29.jpg"
+                alt="Faculty Member 29"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 29
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+
+        <!-- FACULTY 30 -->
+
+        <div class="faculty-card">
+
+            <img
+                src="images/faculty30.jpg"
+                alt="Faculty Member 30"
+                class="faculty-photo"
+            >
+
+            <h2 class="faculty-name">
+                Faculty Member 30
+            </h2>
+
+            <p class="specialization">
+                <span class="specialization-label">
+                    Specialization:
+                </span>
+                To be added
+            </p>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <p>
+        CENTRO ESCOLAR UNIVERSITY
+    </p>
+
+    <p>
+        School of Science and Technology
+    </p>
+
+    <p>
+        Faculty Teaching Biology Students
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     SEARCH FUNCTION
+========================================= -->
+
+<script>
+
+function searchFaculty() {
+
+    let input =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document
+        .getElementsByClassName("faculty-card");
+
+
+    for (
+        let i = 0;
+        i < cards.length;
+        i++
+    ) {
+
+        let text =
+            cards[i]
+            .innerText
+            .toLowerCase();
+
+
+        if (
+            text.includes(input)
+        ) {
+
+            cards[i].style.display = "";
+
+        }
+
+        else {
+
+            cards[i].style.display = "none";
+
+        }
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
