@@ -38,8 +38,27 @@
         header {
             background: #1f4d3a;
             color: white;
+            padding: 40px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-logo {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .header-text {
             text-align: center;
-            padding: 50px 20px;
         }
 
         .university {
@@ -51,7 +70,7 @@
 
         .school {
             font-size: 23px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         header h1 {
@@ -63,6 +82,7 @@
         .subtitle {
             font-size: 18px;
             margin-top: 12px;
+            line-height: 1.5;
         }
 
 
@@ -199,12 +219,17 @@
 
             color: #666;
 
-            line-height: 1.5;
+            line-height: 1.7;
+
         }
 
         .courses strong {
 
             color: #444;
+        }
+
+        .courses-list {
+            margin-top: 5px;
         }
 
 
@@ -237,10 +262,20 @@
            MOBILE
         ========================= */
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
             header {
-                padding: 40px 15px;
+                padding: 35px 15px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-logo {
+                width: 85px;
+                height: 85px;
             }
 
             .university {
@@ -249,6 +284,7 @@
 
             .school {
                 font-size: 19px;
+                margin-bottom: 20px;
             }
 
             header h1 {
@@ -281,21 +317,56 @@
 
 <header>
 
-    <div class="university">
-        CENTRO ESCOLAR UNIVERSITY
-    </div>
+    <div class="header-container">
 
-    <div class="school">
-        School of Science and Technology
-    </div>
 
-    <h1>
-        Faculty Directory
-    </h1>
+        <!-- =========================
+             LEFT LOGO
+        ========================= -->
 
-    <div class="subtitle">
-        Faculty Teaching Biology Courses
-        1st Semester A.Y. 2026-2027
+        <img
+            src="images/ceu-logo.png"
+            alt="Centro Escolar University Logo"
+            class="header-logo"
+        >
+
+
+        <!-- =========================
+             HEADER TEXT
+        ========================= -->
+
+        <div class="header-text">
+
+            <div class="university">
+                CENTRO ESCOLAR UNIVERSITY
+            </div>
+
+            <div class="school">
+                School of Science and Technology
+            </div>
+
+            <h1>
+                Faculty Directory
+            </h1>
+
+            <div class="subtitle">
+                Faculty Teaching Biology Courses<br>
+                1st Semester A.Y. 2026–2027
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RIGHT LOGO
+        ========================= -->
+
+        <img
+            src="images/sst-logo.png"
+            alt="School of Science and Technology Logo"
+            class="header-logo"
+        >
+
     </div>
 
 </header>
@@ -309,7 +380,9 @@
 <div class="container">
 
 
-    <!-- SEARCH -->
+    <!-- =========================
+         SEARCH
+    ========================= -->
 
     <input
         type="text"
@@ -337,7 +410,7 @@
 
             <img
                 src="images/faculty1.jpg"
-                alt="Faculty Photo"
+                alt="Remy A. Bautista"
             >
 
             <h2>
@@ -345,9 +418,8 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Mathematics in the Modern World
-                
             </p>
 
         </div>
@@ -359,7 +431,7 @@
 
             <img
                 src="images/faculty2.jpg"
-                alt="Faculty Photo"
+                alt="Magdalena D. Salvador"
             >
 
             <h2>
@@ -367,7 +439,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 PATH-FIT 1: Movement Competency Training
             </p>
 
@@ -380,7 +452,7 @@
 
             <img
                 src="images/faculty3.jpg"
-                alt="Faculty Photo"
+                alt="Marietta D. Subida"
             >
 
             <h2>
@@ -388,7 +460,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Understanding the Self
             </p>
 
@@ -401,7 +473,7 @@
 
             <img
                 src="images/faculty4.jpg"
-                alt="Faculty Photo"
+                alt="Lani E. Sakay"
             >
 
             <h2>
@@ -409,7 +481,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Empowering the Self
             </p>
 
@@ -422,7 +494,7 @@
 
             <img
                 src="images/faculty5.jpg"
-                alt="Faculty Photo"
+                alt="Dominic S. De Guzman"
             >
 
             <h2>
@@ -430,7 +502,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Religion: History and Texts
             </p>
 
@@ -443,7 +515,7 @@
 
             <img
                 src="images/faculty6.jpg"
-                alt="Faculty Photo"
+                alt="Norilyn F. Bulawin"
             >
 
             <h2>
@@ -451,7 +523,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 General Botany
             </p>
 
@@ -464,7 +536,7 @@
 
             <img
                 src="images/faculty7.jpg"
-                alt="Faculty Photo"
+                alt="Maria Hedley A. Basco"
             >
 
             <h2>
@@ -472,8 +544,8 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Inorganic Chemistry
+                <strong>Courses Handled:</strong><br>
+                Inorganic Chemistry<br>
                 Biochemistry
             </p>
 
@@ -486,7 +558,7 @@
 
             <img
                 src="images/faculty8.jpg"
-                alt="Faculty Photo"
+                alt="Renata Raymunda F. Parungao"
             >
 
             <h2>
@@ -494,7 +566,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Inorganic Chemistry
             </p>
 
@@ -507,7 +579,7 @@
 
             <img
                 src="images/faculty9.jpg"
-                alt="Faculty Photo"
+                alt="Cleo Angelo Guevarra"
             >
 
             <h2>
@@ -515,7 +587,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 NSTP 1
             </p>
 
@@ -528,7 +600,7 @@
 
             <img
                 src="images/faculty10.jpg"
-                alt="Faculty Photo"
+                alt="Generose B. Solas"
             >
 
             <h2>
@@ -536,9 +608,9 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Science, Technology, and Society
-                Comparative Anatomy and Phylogeny of Vertebrates
+                <strong>Courses Handled:</strong><br>
+                Science, Technology, and Society<br>
+                Comparative Anatomy and Phylogeny of Vertebrates<br>
                 Evolutionary Biology
             </p>
 
@@ -551,7 +623,7 @@
 
             <img
                 src="images/faculty11.jpg"
-                alt="Faculty Photo"
+                alt="Jonathan P. Catapang"
             >
 
             <h2>
@@ -559,7 +631,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 PATH-FIT 3: Dance/Individual-Dual Sports
             </p>
 
@@ -572,7 +644,7 @@
 
             <img
                 src="images/faculty12.jpg"
-                alt="Faculty Photo"
+                alt="Arlit Janry C. Parlero"
             >
 
             <h2>
@@ -580,7 +652,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 The Life and Works of Rizal
             </p>
 
@@ -593,7 +665,7 @@
 
             <img
                 src="images/faculty13.jpg"
-                alt="Faculty Photo"
+                alt="Jake M. Lapasaran"
             >
 
             <h2>
@@ -601,7 +673,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Biochemistry
             </p>
 
@@ -614,7 +686,7 @@
 
             <img
                 src="images/faculty14.jpg"
-                alt="Faculty Photo"
+                alt="Jocel Carlo M. Borja"
             >
 
             <h2>
@@ -622,7 +694,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Analytical Chemistry with Instrumentation
             </p>
 
@@ -635,7 +707,7 @@
 
             <img
                 src="images/faculty15.jpg"
-                alt="Faculty Photo"
+                alt="Ian Kenneth M. Cabrera"
             >
 
             <h2>
@@ -643,7 +715,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Comparative Anatomy and Phylogeny of Vertebrates (Lab)
             </p>
 
@@ -656,7 +728,7 @@
 
             <img
                 src="images/faculty16.jpg"
-                alt="Faculty Photo"
+                alt="Hugues V. Tandioy"
             >
 
             <h2>
@@ -664,7 +736,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Foreign Language 2
             </p>
 
@@ -677,7 +749,7 @@
 
             <img
                 src="images/faculty17.jpg"
-                alt="Faculty Photo"
+                alt="Agnes S. Magnaye"
             >
 
             <h2>
@@ -685,8 +757,8 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Evolutionary Biology
+                <strong>Courses Handled:</strong><br>
+                Evolutionary Biology<br>
                 Developmental Biology
             </p>
 
@@ -699,7 +771,7 @@
 
             <img
                 src="images/faculty18.jpg"
-                alt="Faculty Photo"
+                alt="Eufrecina Jean DR. Ramirez"
             >
 
             <h2>
@@ -707,7 +779,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Genetics
             </p>
 
@@ -720,7 +792,7 @@
 
             <img
                 src="images/faculty19.jpg"
-                alt="Faculty Photo"
+                alt="Mark Jerwin F. Fabrero"
             >
 
             <h2>
@@ -728,7 +800,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Genetics
             </p>
 
@@ -741,7 +813,7 @@
 
             <img
                 src="images/faculty20.jpg"
-                alt="Faculty Photo"
+                alt="John Hermie Paul S. Cerezo"
             >
 
             <h2>
@@ -749,9 +821,9 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                General Microbiology
-                Microbial Genetics
+                <strong>Courses Handled:</strong><br>
+                General Microbiology<br>
+                Microbial Genetics<br>
                 Microbial Physiology
             </p>
 
@@ -764,7 +836,7 @@
 
             <img
                 src="images/faculty21.jpg"
-                alt="Faculty Photo"
+                alt="Avelina R. Raqueño"
             >
 
             <h2>
@@ -772,7 +844,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Biostatistics
             </p>
 
@@ -785,15 +857,15 @@
 
             <img
                 src="images/faculty22.jpg"
-                alt="Faculty Photo"
+                alt="Renzy R. Pangilinan"
             >
 
             <h2>
-                Renzy R. Pangilinan 
+                Renzy R. Pangilinan
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Malikhaing Komunikasyon Gamit ang Panitikang Popular
             </p>
 
@@ -806,7 +878,7 @@
 
             <img
                 src="images/faculty23.jpg"
-                alt="Faculty Photo"
+                alt="Teresa R. Perez"
             >
 
             <h2>
@@ -814,8 +886,8 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Economic Botany
+                <strong>Courses Handled:</strong><br>
+                Economic Botany<br>
                 Undergraduate Research 1
             </p>
 
@@ -828,7 +900,7 @@
 
             <img
                 src="images/faculty24.jpg"
-                alt="Faculty Photo"
+                alt="Julieta Z. Dungca"
             >
 
             <h2>
@@ -836,9 +908,9 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Medical Histology
-                Medical Microbiology
+                <strong>Courses Handled:</strong><br>
+                Medical Histology<br>
+                Medical Microbiology<br>
                 General Virology
             </p>
 
@@ -851,7 +923,7 @@
 
             <img
                 src="images/faculty25.jpg"
-                alt="Faculty Photo"
+                alt="Marilou M. Lanto"
             >
 
             <h2>
@@ -859,7 +931,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Medical Histology
             </p>
 
@@ -872,7 +944,7 @@
 
             <img
                 src="images/faculty26.jpg"
-                alt="Faculty Photo"
+                alt="Maria Teresa M. Virgino"
             >
 
             <h2>
@@ -880,7 +952,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Biological Techniques
             </p>
 
@@ -893,7 +965,7 @@
 
             <img
                 src="images/faculty27.jpg"
-                alt="Faculty Photo"
+                alt="Joan S. Adriano"
             >
 
             <h2>
@@ -901,7 +973,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Undergraduate Research 1
             </p>
 
@@ -914,7 +986,7 @@
 
             <img
                 src="images/faculty28.jpg"
-                alt="Faculty Photo"
+                alt="Rissa A. Lasap"
             >
 
             <h2>
@@ -922,7 +994,7 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
+                <strong>Courses Handled:</strong><br>
                 Biological Techniques 1
             </p>
 
@@ -935,7 +1007,7 @@
 
             <img
                 src="images/faculty29.jpg"
-                alt="Faculty Photo"
+                alt="Joshua Allen T. Saliba"
             >
 
             <h2>
@@ -943,12 +1015,13 @@
             </h2>
 
             <p class="courses">
-                <strong>Courses Handled:</strong>
-                Microbial Genetics
+                <strong>Courses Handled:</strong><br>
+                Microbial Genetics<br>
                 Microbial Physiology
             </p>
 
         </div>
+
 
     </div>
 
